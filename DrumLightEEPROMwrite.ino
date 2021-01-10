@@ -5,7 +5,7 @@
 #include <EEPROM.h>
 #include "drums.h"
 
-drumLight myDrumLight = {Bass1, 65523, 80, 20, 0};
+drumLight myDrumLight = {Bass1, 65523, 75, 80, 20, 0};
 
 void setup()
 {
