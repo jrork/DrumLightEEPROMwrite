@@ -5,7 +5,14 @@
 #include <EEPROM.h>
 #include "drums.h"
 
-drumLight myDrumLight = {Bass1, 65523, 75, 80, 20, 0, 1};
+#define COLOR 65523
+#define BRIGHTNESS 100
+#define THRESHOLD 80
+#define DELAY 20
+#define MODE 0
+#define PIXEL_COUNT 13
+
+drumLight myDrumLight = {Bass1, COLOR, BRIGHTNESS, THRESHOLD, DELAY, MODE, PIXEL_COUNT};
 
 void setup()
 {
