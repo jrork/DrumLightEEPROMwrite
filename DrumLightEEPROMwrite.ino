@@ -17,11 +17,14 @@ const char* devicename = "DrumTest";
 const char* devicepassword = "onairadmin";
 
 #define COLOR 65523
-#define BRIGHTNESS 100
-#define THRESHOLD 80
-#define DELAY 20
-#define MODE 2
-#define PIXEL_COUNT 13
+#define DRUM_ID bass3       // See drums.h
+#define BRIGHTNESS 100      // Valid values are 0-100
+#define THRESHOLD 80        // Valid values are 0-100
+#define DELAY 20            // ms delay for on and off
+#define MODE lightOnHitMode // check modes.h
+#define PIXEL_COUNT 13      // this overrides the pixel count set in the code
+// Bass drum has 87 pixels
+// Snare drum has 21 pixels
 
 struct drumLight {
   drumID drumId;
@@ -33,10 +36,7 @@ struct drumLight {
   uint8_t pixelCount;
 };
 
-// Bass drum has 87 pixels
-// Snare drum has 21 pixels
-
-drumLight myDrumLight = {Bass3, COLOR, BRIGHTNESS, THRESHOLD, DELAY, lightOnHitMode, PIXEL_COUNT};
+drumLight myDrumLight = {DRUM_ID, COLOR, BRIGHTNESS, THRESHOLD, DELAY, MODE, PIXEL_COUNT};
 
 void setup()
 {
